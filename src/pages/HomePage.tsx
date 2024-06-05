@@ -13,7 +13,7 @@ const HomePage = () => {
                 You have no books
               </h3>
               <p className="text-sm text-muted-foreground">
-                You can start selling as soon as you add a book.
+                You can read as soon as you add a book.
               </p>
               <Button className="mt-4">Add Books</Button>
             </div>

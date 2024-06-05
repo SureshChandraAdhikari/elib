@@ -1,12 +1,17 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import RegisterPage from "./pages/RegisterPage";
 import DashBoardLayout from "./layout/DashBoardLayout";
 import BooksPage from "./pages/BooksPage";
 import AuthLayout from "./layout/AuthLayout";
+import CreateBook from "./pages/CreateBook";
 
 export const router =  createBrowserRouter([
+     {
+        path: '/',
+        element: <Navigate to="/dashboard/home" />,
+    },
     {
         path:'dashboard',
         element: <DashBoardLayout/>,
@@ -18,6 +23,10 @@ export const router =  createBrowserRouter([
             {
                 path:"books",
                 element:<BooksPage/>
+            },
+            {
+                path: 'books/create',
+                element: <CreateBook />,
             },
         ]
     },
